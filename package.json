@@ -1,0 +1,22 @@
+{
+  "name": "performance_ls_idb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "serve",
+    "benchmark": "npm run benchmark:chrome && npm run benchmark:firefox && npm run benchmark:safari && npm run benchmark:report",
+    "benchmark:chrome": "tach --config chrome.tachometer.json --json-file chrome.results.json",
+    "benchmark:firefox": "tach --config firefox.tachometer.json --json-file firefox.results.json",
+    "benchmark:safari": "tach --config safari.tachometer.json --json-file safari.results.json",
+    "benchmark:report": "node ./bin/format-results.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.1",
+    "tachometer": "^0.7.0"
+  }
+}

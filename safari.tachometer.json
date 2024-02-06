@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Polymer/tachometer/master/config.schema.json",
+  "sampleSize": 50,
+  "timeout": 0,
+  "benchmarks": [
+    {
+      "browser": {
+        "name": "safari"
+      },
+      "measurement": [
+        {
+          "mode": "performance",
+          "entryName": "measure"
+        }
+      ],
+      "expand": [
+        {
+          "name": "LocalStorage add",
+          "url": "http://localhost:3000/ls?opType=add"
+        },
+        {
+          "name": "LocalStorage get",
+          "url": "http://localhost:3000/ls?opType=get"
+        },
+        {
+          "name": "idb add",
+          "url": "http://localhost:3000/idb?opType=add"
+        },
+        {
+          "name": "idb get",
+          "url": "http://localhost:3000/idb?opType=get"
+        }
+      ]
+    }
+  ]
+}
